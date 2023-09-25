@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kostnadsuppdelning</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Kostnadsuppdelning</h2>
+        <div class="form-group">
+            <label for="totalExpenses">Gemensamma utgifter:</label>
+            <input type="number" id="totalExpenses">
+        </div>
+        <div class="form-group">
+            <label for="person1Income">Person 1 inkomst:</label>
+            <input type="number" id="person1Income">
+        </div>
+        <div class="form-group">
+            <label for="person2Income">Person 2 inkomst:</label>
+            <input type="number" id="person2Income">
+        </div>
+        <button onclick="calculateShares()">Beräkna</button>
+        <div id="results"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
