@@ -19,3 +19,18 @@ function calculateShares() {
         <p>Person 2 betalar: ${person2Share.toFixed(2)} kr (${((person2Share / totalExpenses) * 100).toFixed(2)}%)</p>
     `;
 }
+
+function copyToClipboard(elementId) {
+    const element = document.getElementById(elementId);
+    const text = element.textContent || element.innerText;
+    
+    const textarea = document.createElement("textarea");
+    textarea.value = text;
+    document.body.appendChild(textarea);
+    
+    textarea.select();
+    document.execCommand("copy");
+    document.body.removeChild(textarea);
+    
+    alert(`Beloppet ${text} har kopierats till urklipp.`);
+}
