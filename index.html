@@ -6,6 +6,14 @@
     <title>Kostnadsuppdelning</title>
     <link rel="stylesheet" href="styles.css">
 </head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kostnadsuppdelning</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
 <body>
     <div class="container">
         <h2>Kostnadsuppdelning</h2>
@@ -22,8 +30,13 @@
             <input type="number" id="person2Income">
         </div>
         <button onclick="calculateShares()">Beräkna</button>
-        <div id="results"></div>
+        <div id="results">
+            <p>Person 1 betalar: <span id="person1Payment"></span> kr (<span id="person1Percentage"></span>%) <button onclick="copyToClipboard('person1Payment')">Kopiera</button></p>
+            <p>Person 2 betalar: <span id="person2Payment"></span> kr (<span id="person2Percentage"></span>%) <button onclick="copyToClipboard('person2Payment')">Kopiera</button></p>
+        </div>
     </div>
     <script src="script.js"></script>
 </body>
+</html>
+
 </html>
